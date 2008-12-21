@@ -1,0 +1,210 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+@namespace html url("http://www.w3.org/1999/xhtml");
+
+/***********************************************************************************************
+ browser/browser.css
+ ***********************************************************************************************/
+
+/* ::::: Main Window Styling ::::: */
+#navigator-toolbox:-moz-system-metric(windows-default-theme) > toolbar {
+  -moz-appearance: none;
+  border-style: none;
+}
+
+#print-preview-toolbar {
+  -moz-appearance: -moz-win-browsertabbar-toolbox;
+}
+
+/* ::::: Location Bar AutoComplete Styling ::::: *
+
+.ac-url-text:-moz-system-metric(windows-default-theme) {
+  color: #0055bb;
+}
+
+/* ::::: Identity Indicator Styling ::::: *
+
+#urlbar[chromedir="ltr"]:-moz-system-metric(windows-default-theme) {
+  -moz-margin-start: 8px;
+}
+
+#identity-box[chromedir="ltr"]:-moz-system-metric(windows-default-theme) {
+  -moz-margin-start: -6px;
+}
+
+#identity-box[chromedir="ltr"]:-moz-system-metric(windows-default-theme) > hbox {
+  margin: -4px 0;
+  padding: 3px 2px 3px 3px;
+  background-position: 0 3px;
+  -moz-border-radius-topleft: 14px;
+  -moz-border-radius-bottomleft: 14px;
+}
+#identity-box:hover[chromedir="ltr"]:-moz-system-metric(windows-default-theme) > hbox {
+  background-position: 0 -57px;
+}
+#identity-box.verifiedDomain[chromedir="ltr"]:-moz-system-metric(windows-default-theme) > hbox {
+  background-position: 0 -117px;
+}
+#identity-box.verifiedDomain:hover[chromedir="ltr"]:-moz-system-metric(windows-default-theme) > hbox {
+  background-position: 0 -177px;
+}
+#identity-box.verifiedIdentity[chromedir="ltr"]:-moz-system-metric(windows-default-theme) > hbox {
+  background-position: 0 -237px;
+}
+#identity-box.verifiedIdentity:hover[chromedir="ltr"]:-moz-system-metric(windows-default-theme) > hbox {
+  background-position: 0 -297px;
+}
+
+/* Match #identity-box[chromedir="ltr"]'s -moz-margin-start *
+#identity-popup[chromedir="ltr"]:-moz-system-metric(windows-default-theme) {
+  -moz-margin-start: 6px;
+}
+
+/* Bug 413060, comment 16: Vista Aero is a special case where we use a
+   tooltip appearance for the address bar popup panels */
+#identity-popup:-moz-system-metric(windows-default-theme),
+#editBookmarkPanel:-moz-system-metric(windows-default-theme) {
+  -moz-appearance: tooltip;
+  color: InfoText;
+}
+
+#sidebar-splitter:-moz-system-metric(windows-default-theme) {
+  border: 0;
+  -moz-border-end: 1px solid;
+  -moz-border-right-colors: #A9B7C9;
+  -moz-border-left-colors: #A9B7C9;
+  min-width: 0;
+  width: 3px;
+  background-color: transparent;
+  -moz-margin-start: -3px;
+  position: relative;
+  z-index: 10;
+}
+
+#urlbar > .autocomplete-history-dropmarker:hover ,
+#urlbar > .autocomplete-history-dropmarker[open="true"] {
+  background: -moz-dialog url("chrome://aero/skin/browser/navbar-textbox-buttons.png") repeat-x 0 -60px !important;
+}
+
+#identity-box > hbox {
+  background: -moz-dialog url("chrome://aero/skin/browser/navbar-textbox-buttons.png") repeat-x;
+}
+
+/***********************************************************************************************
+ browser/places/organizer.css
+ ***********************************************************************************************/
+ 
+ #placesView:-moz-system-metric(windows-default-theme) {
+  border-top: none;
+}
+
+#placesToolbar {
+  -moz-appearance: -moz-win-media-toolbox;
+  color: -moz-win-mediatext;
+}
+
+#placesMenu > menu {
+  color: -moz-win-mediatext;
+}
+
+#placesView > splitter:-moz-system-metric(windows-default-theme) {
+  border: 0;
+  -moz-border-end: 1px solid;
+  -moz-border-right-colors: #A9B7C9;
+  -moz-border-left-colors: #A9B7C9;
+  min-width: 0;
+  width: 3px !important;
+  background-color: transparent;
+  -moz-margin-start: -3px;
+  position: relative;
+  z-index: 10;
+}
+
+#searchModifiers:-moz-system-metric(windows-default-theme) {
+  border-bottom: 1px solid #A9B7C9;
+}
+
+#organizerScopeBar:-moz-system-metric(windows-default-theme) {
+  -moz-appearance: none;
+  border: none;
+}
+
+#infoPaneBox:-moz-system-metric(windows-default-theme) {
+  border-top-color: #A9B7C9;
+}
+
+#placesView:-moz-system-metric(windows-default-theme),
+#searchModifiers:-moz-system-metric(windows-default-theme),
+#infoPane:-moz-system-metric(windows-default-theme),
+#placesList:-moz-system-metric(windows-default-theme),
+#placeContent:-moz-system-metric(windows-default-theme) {
+  background-color: #EEF3FA;
+}
+
+/***********************************************************************************************
+ global/menulist.css
+ ***********************************************************************************************/
+ 
+menulist:focus > .menulist-label-box {
+/*
+  border: 1px dotted ThreeDDarkShadow;
+*/
+  border: 1px solid transparent;
+  background-color: transparent;
+  color: inherit;
+}
+
+/***********************************************************************************************
+ global/tree.css
+ ***********************************************************************************************/
+
+/* ::::: twisty :::::  */
+ 
+ treechildren:-moz-system-metric(windows-default-theme)::-moz-tree-twisty {
+  -moz-padding-end: 1px;
+  width: 9px;
+  list-style-image: url("chrome://aero/skin/global/tree/twisty-clsd.png");
+}
+
+treechildren:-moz-system-metric(windows-default-theme)::-moz-tree-twisty(open) {
+  list-style-image: url("chrome://aero/skin/global/tree/twisty-open.png");
+}
+
+treechildren:-moz-system-metric(windows-default-theme)::-moz-tree-indentation {
+  width: 12px;
+}
+
+treechildren:-moz-system-metric(windows-default-theme)::-moz-tree-twisty(hover) {
+  list-style-image: url("chrome://aero/skin/global/tree/twisty-clsd-hover.png");
+}
+
+treechildren:-moz-system-metric(windows-default-theme)::-moz-tree-twisty(hover, open) {
+  list-style-image: url("chrome://aero/skin/global/tree/twisty-open-hover.png");
+}
+
+tree[chromedir="rtl"]:-moz-system-metric(windows-default-theme) > treechildren::-moz-tree-twisty {
+  list-style-image: url("chrome://aero/skin/global/tree/twisty-clsd-rtl.png");
+}
+
+tree[chromedir="rtl"]:-moz-system-metric(windows-default-theme) > treechildren::-moz-tree-twisty(open) {
+  list-style-image: url("chrome://aero/skin/global/tree/twisty-open-rtl.png");
+}
+
+tree[chromedir="rtl"]:-moz-system-metric(windows-default-theme) > treechildren::-moz-tree-twisty(hover) {
+  list-style-image: url("chrome://aero/skin/global/tree/twisty-clsd-hover-rtl.png");
+}
+
+tree[chromedir="rtl"]:-moz-system-metric(windows-default-theme) > treechildren::-moz-tree-twisty(hover, open) {
+  list-style-image: url("chrome://aero/skin/global/tree/twisty-open-hover-rtl.png");
+}
+
+/***********************************************************************************************
+ global/console/console.css
+ ***********************************************************************************************/
+
+#ToolbarMode {
+  -moz-appearance: -moz-win-browsertabbar-toolbox;
+}
+
+#ToolbarEval {
+  -moz-appearance: toolbox;
+}
