@@ -18,45 +18,26 @@
 /* ::::: Location Bar AutoComplete Styling ::::: *
 
 .ac-url-text:-moz-system-metric(windows-default-theme) {
-  color: #0055bb;
+  color: -moz-nativehyperlinktext;
 }
 
 /* ::::: Identity Indicator Styling ::::: *
 
 #urlbar[chromedir="ltr"]:-moz-system-metric(windows-default-theme) {
-  -moz-margin-start: 8px;
+  -moz-margin-start: 9px;
 }
 
 #identity-box[chromedir="ltr"]:-moz-system-metric(windows-default-theme) {
-  -moz-margin-start: -6px;
+  -moz-margin-start: -7px;
 }
 
-#identity-box[chromedir="ltr"]:-moz-system-metric(windows-default-theme) > hbox {
-  margin: -4px 0;
-  padding: 3px 2px 3px 3px;
-  background-position: 0 3px;
-  -moz-border-radius-topleft: 14px;
-  -moz-border-radius-bottomleft: 14px;
-}
-#identity-box:hover[chromedir="ltr"]:-moz-system-metric(windows-default-theme) > hbox {
-  background-position: 0 -57px;
-}
-#identity-box.verifiedDomain[chromedir="ltr"]:-moz-system-metric(windows-default-theme) > hbox {
-  background-position: 0 -117px;
-}
-#identity-box.verifiedDomain:hover[chromedir="ltr"]:-moz-system-metric(windows-default-theme) > hbox {
-  background-position: 0 -177px;
-}
-#identity-box.verifiedIdentity[chromedir="ltr"]:-moz-system-metric(windows-default-theme) > hbox {
-  background-position: 0 -237px;
-}
-#identity-box.verifiedIdentity:hover[chromedir="ltr"]:-moz-system-metric(windows-default-theme) > hbox {
-  background-position: 0 -297px;
+#identity-box[chromedir="ltr"]:-moz-system-metric(windows-default-theme) {
+  -moz-border-radius: 11px 0 2px 11px / 15px 0 2px 15px;
 }
 
 /* Match #identity-box[chromedir="ltr"]'s -moz-margin-start *
 #identity-popup[chromedir="ltr"]:-moz-system-metric(windows-default-theme) {
-  -moz-margin-start: 6px;
+  -moz-margin-start: 7px;
 }
 
 /* Bug 413060, comment 16: Vista Aero is a special case where we use a
@@ -65,6 +46,14 @@
 #editBookmarkPanel:-moz-system-metric(windows-default-theme) {
   -moz-appearance: tooltip;
   color: InfoText;
+}
+
+/* Make the left and right paddings smaller, to compensate for the horizontal
+   space added by the tooltip appearance, see bug 432529. */
+#identity-popup-container:-moz-system-metric(windows-default-theme) {
+  -moz-padding-start: 6px;
+  -moz-padding-end: 6px;
+  padding-bottom: 9px;
 }
 
 #sidebar-splitter:-moz-system-metric(windows-default-theme) {
@@ -80,13 +69,34 @@
   z-index: 10;
 }
 
-#urlbar > .autocomplete-history-dropmarker:hover ,
-#urlbar > .autocomplete-history-dropmarker[open="true"] {
-  background: -moz-dialog url("chrome://aero/skin/browser/navbar-textbox-buttons.png") repeat-x 0 -60px !important;
+/* ::::: fullscreen window controls ::::: *
+
+#window-controls {
+  -moz-box-align: start;
 }
 
-#identity-box > hbox {
-  background: -moz-dialog url("chrome://aero/skin/browser/navbar-textbox-buttons.png") repeat-x;
+#minimize-button,
+#restore-button,
+#close-button {
+  -moz-appearance: none;
+  border-style: none;
+  margin: 0;
+}
+#close-button {
+  -moz-image-region: rect(0, 49px, 16px, 32px);
+}
+#close-button:hover {
+  -moz-image-region: rect(16px, 49px, 32px, 32px);
+}
+#close-button:hover:active {
+  -moz-image-region: rect(32px, 49px, 48px, 32px);
+}
+*/
+
+#urlbar > .autocomplete-history-dropmarker:hover ,
+#urlbar > .autocomplete-history-dropmarker[open="true"],
+#identity-box {
+  background-image: url("chrome://aero/skin/browser/navbar-textbox-buttons.png") !important;
 }
 
 /***********************************************************************************************
@@ -102,8 +112,21 @@
   color: -moz-win-mediatext;
 }
 
-#placesMenu > menu {
+#placesToolbar:-moz-system-metric(windows-default-theme) {
+  min-height: 36px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  -moz-padding-start: 6px;
+  -moz-padding-end: 8px;
+}
+
+#places #placesMenu > menu {
   color: -moz-win-mediatext;
+}
+
+#placesMenu:-moz-system-metric(windows-default-theme) > menu > label {
+  -moz-padding-end: 15px;
+  background-image: url(chrome://aero/skin/browser/places/dropDown.png);
 }
 
 #placesView > splitter:-moz-system-metric(windows-default-theme) {
@@ -140,6 +163,27 @@
   background-color: #EEF3FA;
 }
 
+/**** Vista default theme: Library's search box needs to be vertically centered ****/
+#searchFilter:-moz-system-metric(windows-default-theme) {
+  padding-top: 3px;
+  padding-bottom: 2px;
+}
+
+/***********************************************************************************************
+ browser/places/places.css
+ ***********************************************************************************************/
+ 
+/* Style Places sidebars as Vista media collection */
+#bookmarksPanel:-moz-system-metric(windows-default-theme),
+#history-panel:-moz-system-metric(windows-default-theme) {
+  background-color: #EEF3FA;
+}
+
+.sidebar-placesTree:-moz-system-metric(windows-default-theme) {
+  background-color: transparent;
+  border-top: none;
+}
+
 /***********************************************************************************************
  global/menulist.css
  ***********************************************************************************************/
@@ -154,46 +198,63 @@ menulist:focus > .menulist-label-box {
 }
 
 /***********************************************************************************************
+ global/textbox.css
+ ***********************************************************************************************/
+ 
+textbox[empty="true"]:-moz-system-metric(windows-default-theme) {
+  font-style: italic;
+}
+
+/***********************************************************************************************
  global/tree.css
  ***********************************************************************************************/
 
 /* ::::: twisty :::::  */
- 
- treechildren:-moz-system-metric(windows-default-theme)::-moz-tree-twisty {
+
+treechildren::-moz-tree-indentation {
+  width: 12px;
+}
+
+treechildren::-moz-tree-twisty {
   -moz-padding-end: 1px;
   width: 9px;
   list-style-image: url("chrome://aero/skin/global/tree/twisty-clsd.png");
 }
 
-treechildren:-moz-system-metric(windows-default-theme)::-moz-tree-twisty(open) {
+treechildren::-moz-tree-twisty(open) {
   list-style-image: url("chrome://aero/skin/global/tree/twisty-open.png");
 }
 
-treechildren:-moz-system-metric(windows-default-theme)::-moz-tree-indentation {
-  width: 12px;
-}
-
-treechildren:-moz-system-metric(windows-default-theme)::-moz-tree-twisty(hover) {
+/*
+  Please note that the following RTL icons are only available in Aero themes:
+   * chrome://global/skin/tree/twisty-clsd-hover.png
+   * chrome://global/skin/tree/twisty-open-hover.png
+   * chrome://global/skin/tree/twisty-clsd-rtl.png
+   * chrome://global/skin/tree/twisty-open-rtl.png
+   * chrome://global/skin/tree/twisty-clsd-hover-rtl.png
+   * chrome://global/skin/tree/twisty-open-hover-rtl.png
+*/
+treechildren::-moz-tree-twisty(hover) {
   list-style-image: url("chrome://aero/skin/global/tree/twisty-clsd-hover.png");
 }
 
-treechildren:-moz-system-metric(windows-default-theme)::-moz-tree-twisty(hover, open) {
+treechildren::-moz-tree-twisty(hover, open) {
   list-style-image: url("chrome://aero/skin/global/tree/twisty-open-hover.png");
 }
 
-tree[chromedir="rtl"]:-moz-system-metric(windows-default-theme) > treechildren::-moz-tree-twisty {
+tree[chromedir="rtl"] > treechildren::-moz-tree-twisty {
   list-style-image: url("chrome://aero/skin/global/tree/twisty-clsd-rtl.png");
 }
 
-tree[chromedir="rtl"]:-moz-system-metric(windows-default-theme) > treechildren::-moz-tree-twisty(open) {
+tree[chromedir="rtl"] > treechildren::-moz-tree-twisty(open) {
   list-style-image: url("chrome://aero/skin/global/tree/twisty-open-rtl.png");
 }
 
-tree[chromedir="rtl"]:-moz-system-metric(windows-default-theme) > treechildren::-moz-tree-twisty(hover) {
+tree[chromedir="rtl"] > treechildren::-moz-tree-twisty(hover) {
   list-style-image: url("chrome://aero/skin/global/tree/twisty-clsd-hover-rtl.png");
 }
 
-tree[chromedir="rtl"]:-moz-system-metric(windows-default-theme) > treechildren::-moz-tree-twisty(hover, open) {
+tree[chromedir="rtl"] > treechildren::-moz-tree-twisty(hover, open) {
   list-style-image: url("chrome://aero/skin/global/tree/twisty-open-hover-rtl.png");
 }
 

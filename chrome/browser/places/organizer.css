@@ -2,8 +2,8 @@
 
 /* Toolbar */
 #placesToolbar {
-  border: none;
-  min-height: 36px;
+  padding: 3px;  /* b/f buttons have a 1px image padding */
+  -moz-padding-end: 4px;
 }
 
 /* back & forward buttons */
@@ -24,9 +24,6 @@
 
 #back-button,
 #forward-button[chromedir="rtl"] {  
-/*
-  -moz-margin-start: 8px;
-*/
   -moz-image-region: rect(0px, 24px, 24px, 0px);
 }
 #back-button:not([disabled="true"]):hover,
@@ -44,9 +41,6 @@
 
 #forward-button,
 #back-button[chromedir="rtl"] {
-/*
-  -moz-margin-end: 8px;
-*/
   -moz-image-region: rect(0px, 48px, 24px, 24px);
 }
 #forward-button:not([disabled="true"]):hover,
@@ -64,6 +58,7 @@
 
 /* Menu */
 #placesMenu {
+  -moz-margin-start: 8px;
   -moz-appearance: none;
   border: none;
 }
@@ -71,8 +66,8 @@
 #placesMenu > menu {
   -moz-padding-start: 4px;
   -moz-padding-end: 1px;
-  padding-top: 4px;
-  padding-bottom: 4px;
+  padding-top: 2px;
+  padding-bottom: 2px;
   -moz-appearance: toolbarbutton;
   color: -moz-DialogText;
   border: 1px solid transparent;
@@ -136,46 +131,12 @@
   border: 0px;
 }
 
-/* Search Bar */
-#searchbar {
-  margin: 6px -4px 0px 2px;
-}
-
 #infoPaneBox {
   border-top: 1px solid ThreeDShadow;
   padding: 5px;
 }
 
-.textbox-input-closebutton {
-  -moz-appearance: none;
-  margin: 1px 2px 1px 1px;
-  min-width: 0;
-  background-color: transparent;
-  border: none;
-  padding: 0 !important;
-  list-style-image: url("chrome://global/skin/icons/close.png");
-  -moz-image-region: rect(0px 14px 14px 0px);
-  width: 14px;
-  height: 14px;
-  cursor: default;
-}
-
-.textbox-input-closebutton > .button-box {
-  margin: 0;
-  padding: 0;
-  border: 0;
-}
-
-.textbox-input-closebutton:hover {
-  -moz-image-region: rect(0px 28px 14px 14px);
-}
-
-.textbox-input-closebutton:hover:active {
-  -moz-image-region: rect(0px 42px 14px 28px);
-}
-
 .small, .small[disabled="true"] {
-  font-size: x-small;
   min-width: 0px;
   padding: 0px 4px 0px 4px;
   margin: 0px;  
@@ -188,12 +149,8 @@
   border: 0px;
 }
 
-#searchFilter {
-  padding: 0px;
-}
-
-#searchFilter .textbox-input-box {
-  padding: 2px 2px 3px 4px;
+#infoBoxExpanderLabel {
+  -moz-padding-start: 2px;
 }
 
 

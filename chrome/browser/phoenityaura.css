@@ -4,7 +4,8 @@
 /* Hide disabled menu items on right-click context menus (a Safari trick) */
 
 #contentAreaContextMenu menuitem[disabled="true"],
-#contentAreaContextMenu menuitem[disabled="true"] + menuseparator{
+#contentAreaContextMenu menuitem[disabled="true"] + menuseparator,
+#contentAreaContextMenu menuitem[hidden="true"] + menuseparator:not([hidden=true]):last-child{
 	display: none !important;
 }
 
@@ -40,9 +41,49 @@
 	-moz-border-radius-bottomright: 1px;
 }
 
-/**/
+/* Places toolbar */
 
 #placesToolbar #back-button:-moz-system-metric(windows-default-theme),
 #placesToolbar #forward-button:-moz-system-metric(windows-default-theme){
 	padding: 6px;
+}
+
+/* Bigger Type for Location Bar */
+
+#navigator-toolbox[iconsize=large] #urlbar .textbox-input-box{
+	font-size: 15px;
+	padding-top: .15em;
+	padding-bottom: .15em;
+}
+
+#navigator-toolbox[iconsize=large] #urlbar #identity-box > hbox{
+	padding-top: .15em;
+	padding-bottom: .15em;
+}
+
+#navigator-toolbox[iconsize=large] #searchbar .textbox-input-box{
+	font-size: 15px;
+	padding-top: .15em;
+	padding-bottom: .15em;
+}
+
+#navigator-toolbox[iconsize=large] .searchbar-engine-button{
+	margin-top: -.25em;
+	height: 1.6em;
+	margin-bottom: -.25em;
+}
+
+/* Reduce flicker of -moz-dialog to white color when opening new tab, assuming that 'Window' is white */
+
+#main-window tabpanels{
+	background-color: Window;
+}
+
+/* Beautify the spacers */
+
+.toolbarpaletteitem-box[type="spacer"],
+.toolbarpaletteitem-box[type="spring"] {
+	border: 1px solid rgba(0,0,0,0.3);
+	background-color: rgba(255,255,255,0.5) !important;
+	-moz-border-radius: 2px;
 }
