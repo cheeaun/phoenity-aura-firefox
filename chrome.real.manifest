@@ -1,7 +1,10 @@
 skin	browser			phoenityaura	jar:chrome/chrome.jar!/browser/
-skin	communicator	phoenityaura	jar:chrome/chrome.jar!/communicator/
 skin	global			phoenityaura	jar:chrome/chrome.jar!/global/
-skin	help			phoenityaura	jar:chrome/chrome.jar!/help/
 skin	mozapps			phoenityaura	jar:chrome/chrome.jar!/mozapps/
+skin	browser			phoenityaura	jar:chrome/chrome.jar!/darwin/browser/ os=Darwin
+skin	global			phoenityaura	jar:chrome/chrome.jar!/darwin/global/ os=Darwin
+skin	mozapps			phoenityaura	jar:chrome/chrome.jar!/darwin/mozapps/ os=Darwin
+skin	communicator	phoenityaura	jar:chrome/chrome.jar!/communicator/
+skin	help			phoenityaura	jar:chrome/chrome.jar!/help/
 skin	aero			phoenityaura	jar:chrome/chrome.jar!/aero/ os=WINNT osversion>=6
 skin	linux			phoenityaura	jar:chrome/chrome.jar!/linux/ os=Linux
