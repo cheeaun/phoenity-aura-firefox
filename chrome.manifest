@@ -1,9 +1,9 @@
 skin	browser			phoenityaura	chrome/browser/
-skin	communicator	phoenityaura	chrome/communicator/
 skin	global			phoenityaura	chrome/global/
-skin	browser			phoenityaura	chrome/darwin/browser/ os=Darwin
-skin	communicator	phoenityaura	chrome/darwin/communicator/ os=Darwin
-skin	global			phoenityaura	chrome/darwin/global/ os=Darwin
 skin	mozapps			phoenityaura	chrome/mozapps/
+skin	browser			phoenityaura	chrome/darwin/browser/ os=Darwin
+skin	global			phoenityaura	chrome/darwin/global/ os=Darwin
+skin	mozapps	phoenityaura	chrome/darwin/mozapps/ os=Darwin
+skin	communicator	phoenityaura	chrome/communicator/
 skin	aero			phoenityaura	chrome/aero/ os=WINNT osversion>=6
 skin	linux			phoenityaura	chrome/linux/ os=Linux
