@@ -42,6 +42,7 @@
  * ***** END LICENSE BLOCK ***** */
 
 @import url("chrome://global/skin/");
+@import url("chrome://browser/skin/phoenityaura.css"); /* custom Phoenity styles */
 
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 @namespace html url("http://www.w3.org/1999/xhtml");
@@ -302,8 +303,9 @@ toolbar[mode="text"] .toolbarbutton-1 > .toolbarbutton-text {
 }
 
 #nav-bar .toolbarbutton-1 {
-  padding-top: 0;
-  padding-bottom: 0;
+/*  padding-top: 0;
+  padding-bottom: 0;*/
+  padding: 2px 0;
 }
 
 toolbarbutton:not([disabled="true"]):hover,
@@ -1503,7 +1505,8 @@ richlistitem[selected="true"][current="true"] > hbox > .ac-result-type-bookmark,
 }
 
 .ac-url-text {
-  color: -moz-nativehyperlinktext;
+  color: #006600;
+/*  color: -moz-nativehyperlinktext;*/
   font-size: 0.95em;
 }
 

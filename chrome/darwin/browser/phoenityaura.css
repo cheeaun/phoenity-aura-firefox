@@ -1,0 +1,14 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+@namespace html url("http://www.w3.org/1999/xhtml");
+
+/* Hide disabled menu items on right-click context menus (a Safari trick) */
+
+#contentAreaContextMenu menuitem[disabled="true"],
+#contentAreaContextMenu menuitem[disabled="true"] + menuseparator,
+#contentAreaContextMenu menuitem[hidden="true"] + menuseparator:not([hidden=true]):last-child{
+	display: none !important;
+}
+
+#contentAreaContextMenu menuitem:not([disabled="true"]):not([hidden="true"]) + menuitem[disabled="true"] + menuseparator{
+	display: -moz-box !important;
+}
