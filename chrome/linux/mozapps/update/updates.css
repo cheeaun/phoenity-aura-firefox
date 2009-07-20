@@ -56,7 +56,8 @@ remotecontent {
   list-style-image: url("chrome://global/skin/icons/loading_16.png");
 }
 .remoteLoadingThrobber[state="error"] {
-  list-style-image: url("moz-icon://stock/gtk-dialog-error?size=menu");
+/*  list-style-image: url("moz-icon://stock/gtk-dialog-error?size=menu");*/
+  list-style-image: url("chrome://global/skin/icons/notfound.png");
 }
 
 /**
@@ -76,7 +77,8 @@ remotecontent {
 }
 
 #alertImage {
-  list-style-image: url("moz-icon://stock/gtk-dialog-warning?size=dnd");
+/*  list-style-image: url("moz-icon://stock/gtk-dialog-warning?size=dnd");*/
+  list-style-image: url("chrome://global/skin/icons/Warning.png");
   margin-right: 5px;
 }
 
@@ -142,7 +144,8 @@ remotecontent {
 
 #verificationFailedIcon {
   margin-left: 5px;
-  list-style-image: url("moz-icon://stock/gtk-dialog-warning?size=menu");
+/*  list-style-image: url("moz-icon://stock/gtk-dialog-warning?size=menu");*/
+  list-style-image: url("chrome://global/skin/icons/notfound.png");
 }
 
 /**

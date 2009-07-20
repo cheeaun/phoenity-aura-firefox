@@ -277,7 +277,9 @@ richlistitem[opType="needs-uninstall"] .notifyBadge {
 .addonFailure {
   width: 16px;
   height: 16px;
-  list-style-image: url("moz-icon://stock/gtk-dialog-error?size=menu");
+/*  list-style-image: url("moz-icon://stock/gtk-dialog-error?size=menu");*/
+  list-style-image: url("chrome://mozapps/skin/extensions/notifyBadges.png");
+  -moz-image-region: rect(0px 48px 16px 32px);
 }
 
 .addonRating {

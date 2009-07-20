@@ -95,24 +95,30 @@ window.dialog {
 .error-icon,
 .question-icon,
 .authentication-icon {
-  width: 40px;
-  height: 40px;
+/*  width: 40px;
+  height: 40px;*/
+  width: 32px;
+  height: 32px;
 }
 
 .message-icon {
-  list-style-image: url("moz-icon://stock/gtk-dialog-info?size=dialog");
+/*  list-style-image: url("moz-icon://stock/gtk-dialog-info?size=dialog");*/
+  list-style-image: url("chrome://global/skin/icons/Message.png");
 }
 
 .alert-icon {
-  list-style-image: url("moz-icon://stock/gtk-dialog-warning?size=dialog");
+/*  list-style-image: url("moz-icon://stock/gtk-dialog-warning?size=dialog");*/
+  list-style-image: url("chrome://global/skin/icons/Warning.png");
 }
 
 .error-icon {
-  list-style-image: url("moz-icon://stock/gtk-dialog-error?size=dialog");
+/*  list-style-image: url("moz-icon://stock/gtk-dialog-error?size=dialog");*/
+  list-style-image: url("chrome://global/skin/icons/Error.png");
 }
 
 .question-icon {
-  list-style-image: url("moz-icon://stock/gtk-dialog-question?size=dialog");
+/*  list-style-image: url("moz-icon://stock/gtk-dialog-question?size=dialog");*/
+  list-style-image: url("chrome://global/skin/icons/Question.png");
 }
 
 .authentication-icon {

@@ -37,7 +37,9 @@ treechildren::-moz-tree-image(title, separator) {
 }
 
 treechildren::-moz-tree-image(title, container) {
-  list-style-image: url("moz-icon://stock/gtk-directory?size=menu");
+/*  list-style-image: url("moz-icon://stock/gtk-directory?size=menu");*/
+  list-style-image: url("chrome://global/skin/icons/folder-item.png");
+  -moz-image-region: rect(0px, 32px, 16px, 16px);
 }
 
 treechildren::-moz-tree-image(title, container, livemark) {
@@ -82,11 +84,15 @@ treechildren::-moz-tree-image(title, query, dayContainer) {
 }
 
 treechildren::-moz-tree-image(title, query, hostContainer) {
-  list-style-image: url("moz-icon://stock/gtk-directory?size=menu");
+/*  list-style-image: url("moz-icon://stock/gtk-directory?size=menu");*/
+  list-style-image: url("chrome://global/skin/icons/folder-item.png");
+  -moz-image-region: rect(0px, 32px, 16px, 16px);
 }
 
 treechildren::-moz-tree-image(title, query, hostContainer, open) {
-  list-style-image: url("moz-icon://stock/gtk-directory?size=menu");
+/*  list-style-image: url("moz-icon://stock/gtk-directory?size=menu");*/
+  list-style-image: url("chrome://global/skin/icons/folder-item.png");
+  -moz-image-region: rect(16px, 32px, 32px, 16px);
 }
 
 treechildren::-moz-tree-image(title, query, OrganizerQuery_History) {
@@ -98,7 +104,9 @@ treechildren::-moz-tree-image(title, query, OrganizerQuery_History) {
 /* We want some queries to look like ordinary folders. This must come
    after the (title, query) selector, or it would get overridden. */
 treechildren::-moz-tree-image(title, query, folder) {
-  list-style-image: url("moz-icon://stock/gtk-directory?size=menu");
+/*  list-style-image: url("moz-icon://stock/gtk-directory?size=menu");*/
+  list-style-image: url("chrome://global/skin/icons/folder-item.png");
+  -moz-image-region: rect(0px, 32px, 16px, 16px);
 }
 
 treechildren::-moz-tree-row(session-start) {

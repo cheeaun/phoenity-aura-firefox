@@ -1,7 +1,15 @@
-.portrait-page {
+/*.portrait-page {
   list-style-image: url("moz-icon://stock/gtk-orientation-portrait?size=button");
 }
 
 .landscape-page {
   list-style-image: url("moz-icon://stock/gtk-orientation-landscape?size=button");
+}*/
+
+.portrait-page {
+  list-style-image: url("chrome://global/skin/icons/Portrait.png");
+}
+
+.landscape-page {
+  list-style-image: url("chrome://global/skin/icons/Landscape.png");
 }

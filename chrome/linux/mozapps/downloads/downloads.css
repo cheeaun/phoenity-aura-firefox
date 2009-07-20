@@ -91,9 +91,10 @@ menuitem:not([type]) {
 }
 
 .blockedIcon {
-  list-style-image: url("moz-icon://stock/gtk-dialog-error?size=dialog");
+  list-style-image: url(chrome://global/skin/icons/Error.png);
+/*  list-style-image: url("moz-icon://stock/gtk-dialog-error?size=dialog");
   width: 32px;
-  height: 32px;
+  height: 32px;*/
 }
 
 /* prevent flickering when changing states */
@@ -101,7 +102,7 @@ menuitem:not([type]) {
   min-height: 32px;
   min-width: 32px;
 }
-
+/*
 #clearListButton {
   list-style-image: url(moz-icon://stock/gtk-clear?size=button);
   margin-top: 3px;
@@ -110,3 +111,4 @@ menuitem:not([type]) {
 #clearListButton[disabled="true"] {
   list-style-image: url(moz-icon://stock/gtk-clear?size=button&state=disabled);
 }
+*/

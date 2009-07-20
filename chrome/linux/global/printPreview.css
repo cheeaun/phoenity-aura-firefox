@@ -1,4 +1,4 @@
-/* ..... page navigation ..... */
+/* ..... page navigation ..... * /
 
 .home-arrow {
   list-style-image: url("moz-icon://stock/gtk-goto-first-ltr?size=menu");
@@ -32,7 +32,7 @@
   list-style-image: url("moz-icon://stock/gtk-go-forward-rtl?size=menu");
 }
 
-/* ..... orientation ..... */
+/* ..... orientation ..... * /
 
 .toolbar-portrait-page {
   list-style-image: url("moz-icon://stock/gtk-orientation-portrait?size=button");
@@ -40,4 +40,62 @@
 
 .toolbar-landscape-page {
   list-style-image: url("moz-icon://stock/gtk-orientation-landscape?size=button");
+}
+
+/* ..... page navigation ..... */
+
+.home-arrow,
+.end-arrow[chromedir="rtl"] {
+  list-style-image: url("chrome://global/skin/printpreview/arrow-left-end.png");
+  -moz-image-region: rect(0, 16px, 16px, 0);
+}
+
+.home-arrow:hover,
+.end-arrow[chromedir="rtl"]:hover {
+  -moz-image-region: rect(0, 32px, 16px, 16px);
+}
+
+.end-arrow,
+.home-arrow[chromedir="rtl"] {
+  list-style-image: url("chrome://global/skin/printpreview/arrow-right-end.png");
+  -moz-image-region: rect(0, 16px, 16px, 0);
+}
+
+.end-arrow:hover,
+.home-arrow[chromedir="rtl"]:hover {
+  -moz-image-region: rect(0, 32px, 16px, 16px);
+}
+
+.left-arrow,
+.right-arrow[chromedir="rtl"] {
+  list-style-image: url("chrome://global/skin/printpreview/arrow-left.png");
+  -moz-image-region: rect(0, 16px, 16px, 0);
+}
+
+.left-arrow:hover,
+.right-arrow[chromedir="rtl"]:hover {
+  -moz-image-region: rect(0, 32px, 16px, 16px);
+}
+
+.right-arrow,
+.left-arrow[chromedir="rtl"] {
+  list-style-image: url("chrome://global/skin/printpreview/arrow-right.png");
+  -moz-image-region: rect(0, 16px, 16px, 0);
+}
+
+.right-arrow:hover,
+.left-arrow[chromedir="rtl"]:hover {
+  -moz-image-region: rect(0, 32px, 16px, 16px);
+}
+
+/* ..... orientation ..... */
+
+.toolbar-portrait-page {
+  list-style-image: url("chrome://global/skin/icons/Print-preview.png");
+  -moz-image-region: rect(0px 16px 16px 0px);
+}
+
+.toolbar-landscape-page {
+  list-style-image: url("chrome://global/skin/icons/Print-preview.png");
+  -moz-image-region: rect(0px 32px 16px 16px);
 }

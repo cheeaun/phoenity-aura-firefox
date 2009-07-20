@@ -72,7 +72,9 @@ radio[pane=paneAdvanced] {
   width: 16px;
   height: 16px;
   margin: 0px 2px;
-  list-style-image: url("moz-icon://stock/gtk-file?size=menu");
+/*  list-style-image: url("moz-icon://stock/gtk-file?size=menu");*/
+  list-style-image: url("chrome://global/skin/icons/folder-item.png") !important;
+  -moz-image-region: rect(0px, 16px, 16px, 0px);
 }
 
 #paneApplications {
@@ -95,7 +97,8 @@ radio[pane=paneAdvanced] {
 }
 
 #cookiesChildren::-moz-tree-image(domainCol, container) {
-  list-style-image: url("moz-icon://stock/gtk-directory?size=menu");
+/*  list-style-image: url("moz-icon://stock/gtk-directory?size=menu");*/
+  -moz-image-region: rect(0px, 32px, 16px, 16px);
 }
 
 #cookieInfoBox {

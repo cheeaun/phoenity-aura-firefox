@@ -123,41 +123,56 @@ menuitem.bookmark-item {
 }
 
 /* Bookmark items */
-.bookmark-item:not([container])  {
+.bookmark-item  {
+  list-style-image: url("chrome://global/skin/icons/folder-item.png");
+  -moz-image-region: rect(0px, 16px, 16px, 0px);
+}
+/*.bookmark-item:not([container])  {
   list-style-image: url("chrome://global/skin/icons/folder-item.png");
   -moz-image-region: rect(0px, 16px, 16px, 0px)
-}
+}*/
 
 .bookmark-item[container] {
-  list-style-image: url("moz-icon://stock/gtk-directory?size=menu");
+/*  list-style-image: url("moz-icon://stock/gtk-directory?size=menu");*/
+  -moz-image-region: rect(0px, 32px, 16px, 16px);
 }
 
 .bookmark-item[container][livemark] { 
-  list-style-image: url("chrome://browser/skin/feeds/feedIcon16.png");
+/*  list-style-image: url("chrome://browser/skin/feeds/feedIcon16.png");*/
+  list-style-image: url("chrome://browser/skin/livemark-folder.png");
+  -moz-image-region: auto;
 }
 
 .bookmark-item[container][livemark] .bookmark-item {
   list-style-image: url("chrome://browser/skin/places/livemark-item.png");
+  -moz-image-region: auto;
 }
 
 .bookmark-item[container][query] {
   list-style-image: url("chrome://browser/skin/places/query.png");
+  -moz-image-region: auto;
 }
 
 .bookmark-item[query][tagContainer] {
   list-style-image: url("chrome://mozapps/skin/places/tagContainerIcon.png");
+  -moz-image-region: auto;
 }
 
 .bookmark-item[query][dayContainer] {
   list-style-image: url("chrome://browser/skin/places/calendar.png");
+  -moz-image-region: auto;
 }
 
 .bookmark-item[query][hostContainer] {
-  list-style-image: url("moz-icon://stock/gtk-directory?size=menu");
+/*  list-style-image: url("moz-icon://stock/gtk-directory?size=menu");*/
+  list-style-image: url("chrome://global/skin/icons/folder-item.png");
+  -moz-image-region: rect(0px, 32px, 16px, 16px);
 }
 
 .bookmark-item[query][hostContainer][open] {
-  list-style-image: url("moz-icon://stock/gtk-directory?size=menu");
+/*  list-style-image: url("moz-icon://stock/gtk-directory?size=menu");*/
+  list-style-image: url("chrome://global/skin/icons/folder-item.png");
+  -moz-image-region: rect(16px, 32px, 32px, 16px);
 }
 
 /* Stock icons for the menu bar items */
@@ -404,6 +419,7 @@ menuitem:not([type]) {
 
 #bookmarksToolbarFolderMenu {
   list-style-image: url("chrome://browser/skin/places/bookmarksToolbar.png");  
+  -moz-image-region: auto;
 }
 
 #menu_openDownloads {
@@ -1385,7 +1401,8 @@ toolbar[iconsize="small"] #paste-button:not([disabled="true"]):hover:active {
 }
 
 #page-proxy-favicon[pageproxystate="invalid"] {
-  -moz-image-region: rect(16px, 16px, 32px, 0px);
+/*  -moz-image-region: rect(16px, 16px, 32px, 0px);*/
+  -moz-image-region: rect(32px, 16px, 48px, 0px);
 }
 
 #urlbar-throbber {
