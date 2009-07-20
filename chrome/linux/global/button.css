@@ -188,7 +188,7 @@ button[type="disclosure"][open="true"] {
 
 /*
  * GNOME Stock Icon Styles
- */
+ * /
 
 button[icon="accept"] .button-icon {
   list-style-image: url("moz-icon://stock/gtk-ok?size=button");
@@ -381,3 +381,4 @@ button[icon="network"] .button-icon {
 button[icon="network"][disabled="true"] .button-icon {
   list-style-image: url("moz-icon://stock/gtk-network?size=button&state=disabled");
 }
+*/
