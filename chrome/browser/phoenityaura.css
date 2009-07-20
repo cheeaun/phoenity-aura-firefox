@@ -48,31 +48,6 @@
 	padding: 6px;
 }
 
-/* Bigger Type for Location Bar */
-
-#navigator-toolbox[iconsize=large] #urlbar .textbox-input-box{
-	font-size: 15px;
-	padding-top: .15em;
-	padding-bottom: .15em;
-}
-
-#navigator-toolbox[iconsize=large] #urlbar #identity-box > hbox{
-	padding-top: .15em;
-	padding-bottom: .15em;
-}
-
-#navigator-toolbox[iconsize=large] #searchbar .textbox-input-box{
-	font-size: 15px;
-	padding-top: .15em;
-	padding-bottom: .15em;
-}
-
-#navigator-toolbox[iconsize=large] .searchbar-engine-button{
-	margin-top: -.25em;
-	height: 1.6em;
-	margin-bottom: -.25em;
-}
-
 /* Reduce flicker of -moz-dialog to white color when opening new tab, assuming that 'Window' is white */
 
 #main-window tabpanels{
