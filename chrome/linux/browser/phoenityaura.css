@@ -12,3 +12,20 @@
 #contentAreaContextMenu menuitem:not([disabled="true"]):not([hidden="true"]) + menuitem[disabled="true"] + menuseparator{
 	display: -moz-box !important;
 }
+
+/* Tab bar buttons icon size fix */
+.tab-close-button > .toolbarbutton-icon {height: 12px; width: 12px;}
+.tabs-newtab-button > .toolbarbutton-icon {height: 14px; width: 14px;}
+
+/* Tab bar height fix */
+.tabbrowser-tabs {min-height: 27px;}
+
+/* Stop tab icons and text bouncing up and down on switching tabs */
+.tabbrowser-tab {padding-bottom: 2px;}
+.tabbrowser-tab[selected="true"] {padding-bottom: 0px;}
+.tabbrowser-tab > .tab-text{padding-bottom: 0px;}
+.tabbrowser-tab[selected="true"]  > .tab-text {padding-bottom: 2px;}
+.tab-text {margin-bottom: -2px;}
+
+/* Make text bold on selected tab */
+.tabbrowser-tab[selected="true"]  > .tab-text {font-weight: bold;}
