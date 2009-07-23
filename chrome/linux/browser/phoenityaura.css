@@ -18,14 +18,13 @@
 .tabs-newtab-button > .toolbarbutton-icon {height: 14px; width: 14px;}
 
 /* Tab bar height fix */
-.tabbrowser-tabs {min-height: 27px;}
+.tabbrowser-tabs {min-height: 26px;}
 
 /* Stop tab icons and text bouncing up and down on switching tabs */
-.tabbrowser-tab {padding-bottom: 2px;}
-.tabbrowser-tab[selected="true"] {padding-bottom: 0px;}
-.tabbrowser-tab > .tab-text{padding-bottom: 0px;}
-.tabbrowser-tab[selected="true"]  > .tab-text {padding-bottom: 2px;}
-.tab-text {margin-bottom: -2px;}
+.tabbrowser-tabs .tabbrowser-tab {padding-bottom: 2px;}
+.tabbrowser-tabs .tabbrowser-tab[selected="true"] {padding-bottom: 0px;}
+.tabbrowser-tabs .tabbrowser-tab > .tab-text{padding-bottom: 0px; margin-bottom: -2px;}
+.tabbrowser-tabs .tabbrowser-tab[selected="true"]  > .tab-text {padding-bottom: 2px;}
 
 /* Make text bold on selected tab */
 .tabbrowser-tab[selected="true"]  > .tab-text {font-weight: bold;}
