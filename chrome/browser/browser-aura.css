@@ -1,0 +1,262 @@
+#back-button:not([disabled="true"]):hover:active {
+  -moz-image-region: rect(96px 24px 120px 0px);
+}
+
+/*
+#back-button[chromedir="rtl"] {
+  -moz-image-region: rect(0px 48px 24px 24px);
+}
+#back-button[chromedir="rtl"]:not([disabled="true"]):hover,
+#back-button[chromedir="rtl"][buttonover="true"] {
+  -moz-image-region: rect(24px 48px 48px 24px);
+}
+#back-button[chromedir="rtl"][disabled="true"] {
+  -moz-image-region: rect(48px 48px 72px 24px);
+}
+#back-button[chromedir="rtl"]:not([disabled="true"]):hover:active {
+  -moz-image-region: rect(96px 48px 120px 24px);
+}
+*/
+
+#forward-button:not([disabled="true"]):hover:active {
+  -moz-image-region: rect(96px 48px 120px 24px);
+}
+
+/*
+#forward-button[chromedir="rtl"] {
+  -moz-image-region: rect(0px 24px 24px 0px); 
+}
+#forward-button[chromedir="rtl"]:not([disabled="true"]):hover,
+#forward-button[chromedir="rtl"][buttonover="true"] {
+  -moz-image-region: rect(24px 24px 48px 0px);
+}
+#forward-button[chromedir="rtl"][disabled="true"] {
+  -moz-image-region: rect(48px 24px 72px 0px);
+}
+#forward-button[chromedir="rtl"]:not([disabled="true"]):hover:active {
+  -moz-image-region: rect(96px 24px 120px 0px);
+}
+*/
+
+#stop-button:not([disabled="true"]):hover:active {
+  -moz-image-region: rect(96px 72px 120px 48px);
+}
+
+#reload-button:not([disabled="true"]):hover:active {
+  -moz-image-region: rect(96px 96px 120px 72px);
+}
+
+#home-button:not([disabled="true"]):hover:active {
+  -moz-image-region: rect(96px 120px 120px 96px);
+}
+
+/*
+#downloads-button[disabled="true"] {
+  -moz-image-region: rect(48px 144px 72px 120px);
+}
+*/
+
+#downloads-button:hover:active {
+  -moz-image-region: rect(96px 144px 120px 120px);
+}
+
+/*
+#history-button[disabled="true"] {
+  -moz-image-region: rect(48px 168px 72px 144px);
+}
+*/
+
+#history-button[checked="true"] {
+  -moz-image-region: rect(72px 168px 96px 144px);
+}
+#history-button:hover:active {
+  -moz-image-region: rect(96px 168px 120px 144px);
+}
+
+/*
+#bookmarks-button[disabled="true"] {
+  -moz-image-region: rect(48px 192px 72px 168px);
+}
+*/
+
+#bookmarks-button[checked="true"] {
+  -moz-image-region: rect(72px 192px 96px 168px);
+}
+#bookmarks-button:hover:active {
+  -moz-image-region: rect(96px 192px 120px 168px);
+}
+
+#print-button:not([disabled="true"]):hover:active {
+  -moz-image-region: rect(96px 216px 120px 192px);
+}
+
+/*
+#new-tab-button[disabled="true"] {
+  -moz-image-region: rect(48px 240px 72px 216px);
+}
+*/
+
+#new-tab-button:hover:active {
+  -moz-image-region: rect(96px 240px 120px 216px);
+}
+
+/*
+#new-window-button[disabled="true"] {
+  -moz-image-region: rect(48px 264px 72px 240px);
+}
+*/
+
+#new-window-button:hover:active {
+  -moz-image-region: rect(96px 264px 120px 240px);
+}
+
+#cut-button:not([disabled="true"]):hover:active {
+  -moz-image-region: rect(96px 288px 120px 264px);
+}
+
+#copy-button:not([disabled="true"]):hover:active {
+  -moz-image-region: rect(96px 312px 120px 288px);
+}
+
+#paste-button:not([disabled="true"]):hover:active {
+  -moz-image-region: rect(96px 336px 120px 312px);
+}
+
+#fullscreen-button[checked="true"] {
+  -moz-image-region: rect(72px 360px 96px 336px);
+}
+#fullscreen-button:hover:active {
+  -moz-image-region: rect(96px 360px 120px 336px);
+}
+
+toolbar[iconsize="small"] #back-button:not([disabled="true"]):hover:active {
+  -moz-image-region: rect(64px 16px 80px 0px);
+}
+
+/*
+toolbar[iconsize="small"] #back-button[chromedir="rtl"] {
+  -moz-image-region: rect(0px 32px 16px 16px);
+}
+toolbar[iconsize="small"] #back-button[chromedir="rtl"]:not([disabled="true"]):hover,
+toolbar[iconsize="small"] #back-button[chromedir="rtl"][buttonover="true"] {
+  -moz-image-region: rect(16px 32px 32px 16px);
+}
+toolbar[iconsize="small"] #back-button[chromedir="rtl"][disabled="true"] {
+  -moz-image-region: rect(32px 32px 48px 16px);
+}
+toolbar[iconsize="small"] #back-button[chromedir="rtl"]:not([disabled="true"]):hover:active {
+  -moz-image-region: rect(64px 32px 80px 16px);
+}
+*/
+
+toolbar[iconsize="small"] #forward-button:not([disabled="true"]):hover:active {
+  -moz-image-region: rect(64px 32px 80px 16px);
+}
+
+/*
+toolbar[iconsize="small"] #forward-button[chromedir="rtl"] {
+  -moz-image-region: rect(0px 16px 16px 0px);
+}
+toolbar[iconsize="small"] #forward-button[chromedir="rtl"]:not([disabled="true"]):hover,
+toolbar[iconsize="small"] #forward-button[chromedir="rtl"][buttonover="true"] {
+  -moz-image-region: rect(16px 16px 32px 0px);
+}
+toolbar[iconsize="small"] #forward-button[chromedir="rtl"][disabled="true"] {
+  -moz-image-region: rect(32px 16px 48px 0px);
+}
+toolbar[iconsize="small"] #forward-button[chromedir="rtl"]:not([disabled="true"]):hover:active {
+  -moz-image-region: rect(64px 16px 80px 0px);
+}
+*/
+
+toolbar[iconsize="small"] #stop-button:not([disabled="true"]):hover:active {
+  -moz-image-region: rect(64px 48px 80px 32px);
+}
+
+toolbar[iconsize="small"] #reload-button:not([disabled="true"]):hover:active {
+  -moz-image-region: rect(64px 64px 80px 48px);
+}
+
+toolbar[iconsize="small"] #home-button:not([disabled="true"]):hover:active,
+#home-button.bookmark-item:hover:active {
+  -moz-image-region: rect(64px 80px 80px 64px);
+}
+
+/*
+toolbar[iconsize="small"] #downloads-button[disabled="true"] {
+  -moz-image-region: rect(32px 96px 48px 80px);
+}
+*/
+
+toolbar[iconsize="small"] #downloads-button:hover:active {
+  -moz-image-region: rect(64px 96px 80px 80px);
+}
+
+/*
+toolbar[iconsize="small"] #history-button[disabled="true"] {
+  -moz-image-region: rect(32px 112px 48px 96px);
+}
+*/
+
+toolbar[iconsize="small"] #history-button[checked="true"] {
+  -moz-image-region: rect(48px 112px 64px 96px);
+}
+toolbar[iconsize="small"] #history-button:hover:active {
+  -moz-image-region: rect(64px 112px 80px 96px);
+}
+
+/*
+toolbar[iconsize="small"] #bookmarks-button[disabled="true"] {
+  -moz-image-region: rect(32px 128px 48px 112px);
+}
+*/
+
+toolbar[iconsize="small"] #bookmarks-button[checked="true"] {
+  -moz-image-region: rect(48px 128px 64px 112px);
+}
+toolbar[iconsize="small"] #bookmarks-button:hover:active {
+  -moz-image-region: rect(64px 128px 80px 112px);
+}
+
+toolbar[iconsize="small"] #print-button:not([disabled="true"]):hover:active {
+  -moz-image-region: rect(64px 144px 80px 128px);
+}
+
+/*
+toolbar[iconsize="small"] #new-tab-button[disabled="true"] {
+  -moz-image-region: rect(32px 160px 48px 144px);
+}
+*/
+
+toolbar[iconsize="small"] #new-tab-button:hover:active {
+  -moz-image-region: rect(64px 160px 80px 144px);
+}
+
+/*
+toolbar[iconsize="small"] #new-window-button[disabled="true"] {
+  -moz-image-region: rect(32px 176px 48px 160px);
+}
+*/
+
+toolbar[iconsize="small"] #new-window-button:hover:active {
+  -moz-image-region: rect(64px 176px 80px 160px);
+}
+
+toolbar[iconsize="small"] #cut-button:not([disabled="true"]):hover:active {
+  -moz-image-region: rect(64px 192px 80px 176px);
+}
+
+toolbar[iconsize="small"] #copy-button:not([disabled="true"]):hover:active {
+  -moz-image-region: rect(64px 208px 80px 192px);
+}
+
+toolbar[iconsize="small"] #paste-button:not([disabled="true"]):hover:active {
+  -moz-image-region: rect(64px 224px 80px 208px);
+}
+
+#fullscreen-button[checked="true"] {
+  -moz-image-region: rect(48px 240px 64px 224px);
+}
+#fullscreen-button:hover:active {
+  -moz-image-region: rect(64px 240px 80px 224px);
+}

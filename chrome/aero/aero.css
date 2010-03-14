@@ -23,20 +23,20 @@
 
 /* ::::: Identity Indicator Styling ::::: *
 
-#urlbar[chromedir="ltr"]:-moz-system-metric(windows-default-theme) {
+#urlbar:-moz-locale-dir(ltr):-moz-system-metric(windows-default-theme) {
   -moz-margin-start: 9px;
 }
 
-#identity-box[chromedir="ltr"]:-moz-system-metric(windows-default-theme) {
+#identity-box:-moz-locale-dir(ltr):-moz-system-metric(windows-default-theme) {
   -moz-margin-start: -7px;
 }
 
-#identity-box[chromedir="ltr"]:-moz-system-metric(windows-default-theme) {
+#identity-box:-moz-locale-dir(ltr):-moz-system-metric(windows-default-theme) {
   -moz-border-radius: 11px 0 2px 11px / 15px 0 2px 15px;
 }
 
-/* Match #identity-box[chromedir="ltr"]'s -moz-margin-start *
-#identity-popup[chromedir="ltr"]:-moz-system-metric(windows-default-theme) {
+/* Match #identity-box:-moz-locale-dir(ltr)'s -moz-margin-start *
+#identity-popup:-moz-locale-dir(ltr):-moz-system-metric(windows-default-theme) {
   -moz-margin-start: 7px;
 }
 
@@ -53,7 +53,6 @@
 #identity-popup-container:-moz-system-metric(windows-default-theme) {
   -moz-padding-start: 6px;
   -moz-padding-end: 6px;
-  padding-bottom: 9px;
 }
 
 #sidebar-splitter:-moz-system-metric(windows-default-theme) {
@@ -69,29 +68,47 @@
   z-index: 10;
 }
 
-/* ::::: fullscreen window controls ::::: *
+#allTabs-panel:-moz-system-metric(windows-compositor),
+#ctrlTab-panel:-moz-system-metric(windows-compositor) {
+  background: transparent;
+  -moz-appearance: -moz-win-glass;
+  -moz-border-radius: 0;
+  border: none;
+  font: normal 1.2em "Segoe UI";
+  color: black;
+  text-shadow: white -1px -1px .5em, white -1px 1px .5em, white 1px 1px .5em, white 1px -1px .5em;
+}
+
+/* ::::: fullscreen window controls ::::: */
 
 #window-controls {
-  -moz-box-align: start;
+  -moz-box-align: start !important;
 }
 
 #minimize-button,
 #restore-button,
 #close-button {
-  -moz-appearance: none;
-  border-style: none;
-  margin: 0;
+  -moz-appearance: none !important;
+  border-style: none !important;
+  margin: 0 !important;
 }
 #close-button {
-  -moz-image-region: rect(0, 49px, 16px, 32px);
+  -moz-image-region: rect(0, 49px, 16px, 32px) !important;
 }
 #close-button:hover {
-  -moz-image-region: rect(16px, 49px, 32px, 32px);
+  -moz-image-region: rect(16px, 49px, 32px, 32px) !important;
 }
 #close-button:hover:active {
-  -moz-image-region: rect(32px, 49px, 48px, 32px);
+  -moz-image-region: rect(32px, 49px, 48px, 32px) !important;
 }
-*/
+
+/**/
+
+#minimize-button,
+#restore-button,
+#close-button {
+  list-style-image: url("chrome://aero/skin/global/icons/windowControls.png") !important;
+}
 
 #urlbar > .autocomplete-history-dropmarker:hover ,
 #urlbar > .autocomplete-history-dropmarker[open="true"],
@@ -103,7 +120,7 @@
  browser/places/organizer.css
  ***********************************************************************************************/
  
- #placesView:-moz-system-metric(windows-default-theme) {
+#placesView:-moz-system-metric(windows-default-theme) {
   border-top: none;
 }
 
@@ -113,18 +130,21 @@
 }
 
 #placesToolbar:-moz-system-metric(windows-default-theme) {
+/*
   min-height: 36px;
   padding-top: 0px;
   padding-bottom: 0px;
   -moz-padding-start: 6px;
   -moz-padding-end: 8px;
+*/
+padding: 0;
 }
 
-#places #placesMenu > menu {
-  color: -moz-win-mediatext;
+#placesMenu > menu {
+  color: -moz-win-mediatext !important;
 }
 
-#placesMenu:-moz-system-metric(windows-default-theme) > menu > label {
+#placesMenu > menu > .menubar-text:-moz-system-metric(windows-default-theme) {
   -moz-padding-end: 15px;
   background-image: url(chrome://aero/skin/browser/places/dropDown.png);
 }
@@ -185,14 +205,26 @@
 }
 
 /***********************************************************************************************
+ global/menu.css
+ ***********************************************************************************************/
+ 
+@media all and (-moz-windows-default-theme) {
+  menubar > menu:-moz-lwtheme {
+    -moz-appearance: menuitem;
+  }
+
+  menubar > menu:-moz-lwtheme[_moz-menuactive="true"]:not([disabled="true"]) {
+    color: inherit !important;
+    text-shadow: inherit;
+  }
+}
+
+/***********************************************************************************************
  global/menulist.css
  ***********************************************************************************************/
  
 menulist:focus > .menulist-label-box {
-/*
   border: 1px dotted ThreeDDarkShadow;
-*/
-  border: 1px solid transparent;
   background-color: transparent;
   color: inherit;
 }
@@ -201,8 +233,19 @@ menulist:focus > .menulist-label-box {
  global/textbox.css
  ***********************************************************************************************/
  
-textbox[empty="true"]:-moz-system-metric(windows-default-theme) {
+textbox[isempty="true"]:-moz-system-metric(windows-default-theme) {
   font-style: italic;
+}
+
+/***********************************************************************************************
+ global/toolbarbutton.css
+ ***********************************************************************************************/
+ 
+@media all and (-moz-windows-default-theme) {
+  toolbarbutton:-moz-lwtheme:not([disabled="true"]) {
+    color: inherit;
+    text-shadow: inherit;
+  }
 }
 
 /***********************************************************************************************
@@ -242,19 +285,19 @@ treechildren::-moz-tree-twisty(hover, open) {
   list-style-image: url("chrome://aero/skin/global/tree/twisty-open-hover.png");
 }
 
-tree[chromedir="rtl"] > treechildren::-moz-tree-twisty {
+treechildren:-moz-locale-dir(rtl)::-moz-tree-twisty {
   list-style-image: url("chrome://aero/skin/global/tree/twisty-clsd-rtl.png");
 }
 
-tree[chromedir="rtl"] > treechildren::-moz-tree-twisty(open) {
+treechildren:-moz-locale-dir(rtl)::-moz-tree-twisty(open) {
   list-style-image: url("chrome://aero/skin/global/tree/twisty-open-rtl.png");
 }
 
-tree[chromedir="rtl"] > treechildren::-moz-tree-twisty(hover) {
+treechildren:-moz-locale-dir(rtl)::-moz-tree-twisty(hover) {
   list-style-image: url("chrome://aero/skin/global/tree/twisty-clsd-hover-rtl.png");
 }
 
-tree[chromedir="rtl"] > treechildren::-moz-tree-twisty(hover, open) {
+treechildren:-moz-locale-dir(rtl)::-moz-tree-twisty(hover, open) {
   list-style-image: url("chrome://aero/skin/global/tree/twisty-open-hover-rtl.png");
 }
 

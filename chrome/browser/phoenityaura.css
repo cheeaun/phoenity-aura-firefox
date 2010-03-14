@@ -15,7 +15,7 @@
 
 /* Tiny rounded-corner textboxes */
 
-#urlbar[chromedir]:-moz-system-metric(windows-default-theme),
+#urlbar:-moz-system-metric(windows-default-theme),
 .searchbar-textbox{
 	-moz-border-radius: 3px;
 	border: 2px solid;
@@ -30,15 +30,15 @@
 	margin-top: -1px;
 }
 
-#identity-box[chromedir] > hbox,
+#identity-box-inner,
 .searchbar-engine-button{
-	-moz-border-radius-topleft: 1px;
-	-moz-border-radius-bottomleft: 1px;
+	-moz-border-radius-topleft: 2px;
+	-moz-border-radius-bottomleft: 2px;
 }
 
 #urlbar > .autocomplete-history-dropmarker{
-	-moz-border-radius-topright: 1px;
-	-moz-border-radius-bottomright: 1px;
+	-moz-border-radius-topright: 2px;
+	-moz-border-radius-bottomright: 2px;
 }
 
 /* Places toolbar */
