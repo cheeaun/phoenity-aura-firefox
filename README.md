@@ -7,4 +7,4 @@ This repository is for the Phoenity Aura theme.
 Notes
 -----
 
-* chrome.manifest points to folders, chrome.real.manifest points to compiled chrome.jar file.
+* chrome.manifest points to compiled chrome jar file, chrome.folder.manifest points to the folders.
