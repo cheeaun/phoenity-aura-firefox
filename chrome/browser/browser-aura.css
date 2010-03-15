@@ -254,9 +254,9 @@ toolbar[iconsize="small"] #paste-button:not([disabled="true"]):hover:active {
   -moz-image-region: rect(64px 224px 80px 208px);
 }
 
-#fullscreen-button[checked="true"] {
+toolbar[iconsize="small"] #fullscreen-button[checked="true"] {
   -moz-image-region: rect(48px 240px 64px 224px);
 }
-#fullscreen-button:hover:active {
+toolbar[iconsize="small"] #fullscreen-button:hover:active {
   -moz-image-region: rect(64px 240px 80px 224px);
 }

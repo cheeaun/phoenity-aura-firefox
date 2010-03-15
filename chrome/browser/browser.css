@@ -44,7 +44,7 @@
 @import url("chrome://global/skin/");
 @import url("chrome://aero/skin/"); /* Aero styles */
 @import url("chrome://browser/skin/phoenityaura.css"); /* custom Phoenity styles */
-@import url("chrome://browser/skin/browser-aura.css"); /* custom Phoenity styles */
+@import url("chrome://browser/skin/browser-aura.css"); /* more styles */
 
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 @namespace html url("http://www.w3.org/1999/xhtml");
