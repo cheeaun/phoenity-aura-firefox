@@ -95,10 +95,6 @@ richlistitem[selected="true"] .text-link {
   margin-bottom: 2px;
 }
 
-richlistitem[selected="true"]:not([opType]) .descriptionCrop {
-  display: none;
-}
-
 .addonName {
   font-weight: bold;
 }
@@ -142,6 +138,14 @@ richlistitem[selected="true"]:not([opType]) .descriptionCrop {
   max-height: 32px;
 }
 
+richlistitem[lwtheme] .addonIcon > image {
+  list-style-image: url("chrome://mozapps/skin/extensions/themeGeneric.png");
+}
+
+richlistitem[plugin] .addonIcon > image {
+  list-style-image: url("chrome://mozapps/skin/plugins/pluginGeneric.png");
+}
+
 .updateBadge,
 .notifyBadge {
   width: 16px;
@@ -160,22 +164,6 @@ richlistitem[selected="true"]:not([opType]) .descriptionCrop {
   -moz-margin-start: -2px;
   -moz-image-region: rect(0px 48px 16px 32px);
 /*  list-style-image: url("moz-icon://stock/gtk-dialog-error?size=menu");*/
-}
-
-.updateBadge,
-.updateAvailableBox,
-.notifyBadge {
-  display: none;
-}
-
-richlistitem[availableUpdateURL][updateable="true"] .updateBadge,
-richlistitem[availableUpdateURL][updateable="true"] .updateAvailableBox,
-richlistitem[compatible="false"] .notifyBadge,
-richlistitem[providesUpdatesSecurely="false"] .notifyBadge,
-richlistitem[blocklisted="true"] .notifyBadge,
-richlistitem[blocklistedsoft="true"] .notifyBadge,
-richlistitem[satisfiesDependencies="false"] .notifyBadge {
-  display: -moz-box;
 }
 
 /* Selected Add-on buttons
@@ -202,23 +190,7 @@ richlistitem[satisfiesDependencies="false"] .notifyBadge {
   -moz-margin-start: 5px;
 }
 
-/* Selected Add-on status messages and images */
-richlistitem[compatible="true"] .incompatibleBox,
-richlistitem[providesUpdatesSecurely="true"] .insecureUpdateBox,
-richlistitem[satisfiesDependencies="true"] .needsDependenciesBox,
-richlistitem:not([blocklisted="true"]):not([blocklistedsoft="true"]) .blocklistedBox,
-richlistitem[blocklistedsoft="false"]:not([selected="true"]) .blocklistedBox,
-richlistitem[blocklisted="false"] .blocklistedLabel,
-richlistitem[blocklistedsoft="false"] .softBlocklistedLabel,
-richlistitem[opType="needs-uninstall"] .blocklistedBox,
-richlistitem[opType="needs-uninstall"] .incompatibleBox,
-richlistitem[opType="needs-uninstall"] .needsDependenciesBox,
-richlistitem[opType="needs-uninstall"] .blocklistedBox {
-  display: none;
-}
-
 richlistitem[loading="true"] .updateBadge {
-  display: -moz-box;
   width: 16px;
   height: 16px;
   margin-bottom: -3px;
@@ -246,10 +218,6 @@ richlistitem[loading="true"] .updateBadge {
 .selectedStatusMsgs label.text-link {
   font-weight: normal;
   border: none;
-}
-
-richlistitem[opType="needs-uninstall"] .notifyBadge {
-  display: none;
 }
 
 .addon-search-details {
@@ -282,48 +250,19 @@ richlistitem[opType="needs-uninstall"] .notifyBadge {
   -moz-image-region: rect(0px 48px 16px 32px);
 }
 
-.addonRating {
-  display: none;
-}
-
 .addonLearnMore {
   margin-top: 4px;
   margin-bottom: 4px;
 }
 
 .addonRating[rating] {
-  display: -moz-box;
 /*  width: 70px;
   height: 14px;*/
   width: 59px;
   height: 11px;
   list-style-image: url("chrome://mozapps/skin/extensions/ratings.png");
 }
-/*
-.addonRating[rating="0"] {
-  -moz-image-region: rect(0px 70px 14px 0px);
-}
 
-.addonRating[rating="1"] {
-  -moz-image-region: rect(14px 70px 28px 0px);
-}
-
-.addonRating[rating="2"] {
-  -moz-image-region: rect(28px 70px 42px 0px);
-}
-
-.addonRating[rating="3"] {
-  -moz-image-region: rect(42px 70px 56px 0px);
-}
-
-.addonRating[rating="4"] {
-  -moz-image-region: rect(56px 70px 70px 0px);
-}
-
-.addonRating[rating="5"] {
-  -moz-image-region: rect(70px 70px 84px 0px);
-}
-*/
 .addonRating[rating="0"] {
   -moz-image-region: rect(0px 59px 11px 0px);
 }
@@ -390,22 +329,22 @@ vbox[typeName="status"][type="header-recommended"] {
   -moz-box-align: center;
 }
 
-/* View buttons */
-.viewSelector {
+/* View buttons resp. Progress box */
+#topBar {
   -moz-appearance: listbox;
-  margin: 8px 8px 0 8px;
-  padding: 0;
+  margin: 8px 8px 0;
 }
 
-#viewGroup radio {
+#viewGroup > radio {
   -moz-appearance: none;
   min-width: 4.5em;
   margin: 0;
   padding: 3px;
   list-style-image: url("chrome://mozapps/skin/extensions/viewButtons.png");
+  color: -moz-FieldText;
 }
 
-#viewGroup radio[selected="true"] {
+#viewGroup > radio[selected="true"] {
   background-color: Highlight;
   color: HighlightText; 
 }
